@@ -14,12 +14,12 @@ let data = {
   name: 'Archebus',
 };
 
-// Endpoint to serve JSON data
+// Serve JSON data
 app.get('/data', (req, res) => {
   res.json(data);
 });
 
-// Endpoint to update JSON data
+// Update JSON data
 app.post('/data', (req, res) => {
   data.name = req.body.name;
   res.json(data);

@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 18px;
+
+}
+
+body {
+    display: flex;
+    height: 60vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 50%);
+}
+
+.wrapper {
+    padding: 20px 40px 30px 40px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.catman {
+    width: 100px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.wrapper > h2 {
+    font-size: 1.4rem;
+}
+
+.wrapper > p {
+    margin-bottom: 20px;
+}

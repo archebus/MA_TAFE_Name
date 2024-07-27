@@ -14,38 +14,39 @@ function App() {
   }, []);
 
   const handleSubmit = () => {
-    fetch('http://localhost:3001/data', {
+    fetch('http://localhost:3001/data', 
+    {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: {'Content-Type': 'application/json',},
       body: JSON.stringify({ name: inputName }),
     })
       .then(response => response.json())
-      .then(data => {
-        setName(data.name);
-        setSubmitted(true);
-      })
+      .then(data => {setName(data.name);
+                     setSubmitted(true);
+                    })
       .catch(error => console.error('Error submitting data:', error));
   };
 
+  const nameRequest =   <>
+                        <h2>Hello World</h2>
+                        <p>What is your name?</p>
+                        <input
+                          type="text"
+                          value={inputName}
+                          onChange={(e) => setInputName(e.target.value)}
+                        />
+                        <button onClick={handleSubmit}>Submit</button>
+                        </>
+  
+  const welcome =       <h2>Welcome {name}</h2>
+
   return (
-    <div>
-      {submitted ? (
-        <h2>Welcome {name}</h2>
-      ) : (
-        <>
-          <h2>Hello World</h2>
-          <p>What is your name?</p>
-          <input
-            type="text"
-            value={inputName}
-            onChange={(e) => setInputName(e.target.value)}
-          />
-          <button onClick={handleSubmit}>Submit</button>
-        </>
-      )}
+    <>
+    <div className='wrapper'>
+    <img className='catman' src="./src/assets/cat.png" alt="" />
+      {submitted ? welcome : nameRequest}
     </div>
+    </>
   );
 }
 
