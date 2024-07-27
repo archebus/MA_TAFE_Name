@@ -1,4 +1,4 @@
-# React and Express | Hello World | Mobile Apps Homework
+# Hello World
 
 This project demonstrates a simple React application that interacts with an Express server. Users can submit their name through the React app, which will be stored on the server and displayed on the screen.
 
